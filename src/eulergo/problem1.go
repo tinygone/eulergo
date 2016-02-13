@@ -1,10 +1,10 @@
-package main
+package eulergo
 
 import (
 	"fmt"
 )
 
-func main() {
+func Problem1() {
 	fmt.Println("Project Euler Problem1")
 	//numbers3_5 := []int{}
 	numbers3_5 := make([]int, 0, 1000)
@@ -12,7 +12,7 @@ func main() {
 
 	for a := 2; a < max_number; a++ {
 		if a%3 == 0 || a%5 == 0 {
-			fmt.Println(a)
+			//fmt.Println(a)
 			//if there is none of "numbers3_5 =", a error of append(numbers3_5, 1) evaluated but not used will happend
 			numbers3_5 = append(numbers3_5, a)
 		}
