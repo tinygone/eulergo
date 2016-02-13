@@ -1,14 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"eulergo"
+	"fmt"
 )
 
 func main() {
 	fmt.Println("start")
-	eulergo.Problem4()
-	
-	
-	
+	//fmt.Println(eulergo.Problem5(1, 20))
+	eulergo.Problem5()
+
 }

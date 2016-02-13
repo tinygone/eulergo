@@ -24,6 +24,7 @@ func Problem4() {
 	fmt.Println("max Prime = " + strconv.FormatInt(maxPalindromic, 10))
 
 }
+
 func isPalindrome(number int64) bool {
 	numberStr := strconv.FormatInt(number, 10)
 	n := len(numberStr)
