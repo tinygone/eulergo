@@ -7,7 +7,7 @@ import (
 
 func main() {
 	fmt.Println("start")
-	eulergo.Problem2()
+	eulergo.Problem3()
 	
 	
 	
