@@ -19,13 +19,37 @@ func Problem8() {
 
 	//i, err = strconv.ParseInt(numberStr[0], 10, 64)
 
-	i := numberStr[0] - 48
-	j := numberStr[1] - 48
-	
-	multipleResult  := i * j
-	
-	fmt.Println("result = " + strconv.FormatInt(multipleResult, 10))
+	var mulTmpResult int64 = 1
+	var maxMulResult int64 = 1
+	var startIndex int64 = 0
+	var index int64 = 0
+	var length int64 = int64(len(numberStr))
+	for index = 0; index < length; index++ {
+		mulTmpResult = calcMul(numberStr, index, index+destCount)
+		if maxMulResult < mulTmpResult {
+			maxMulResult = mulTmpResult
+			startIndex = index
+		}
+	}
 
-	fmt.Println("result = " + strconv.FormatInt(destCount, 10))
+	fmt.Println("result = " + strconv.FormatInt(maxMulResult, 10))
+	fmt.Println("the sequence is  ")
+	for index = startIndex; index < startIndex+destCount; index++ {
+		fmt.Printf("%c ", numberStr[index])
+	}
 
+}
+
+func calcMul(numberStr string, start int64, end int64) (mulResult int64) {
+	var length int64 = int64(len(numberStr))
+	if end > length {
+		mulResult = 0
+		return
+	}
+	mulResult = 1
+	for index := start; index < end; index++ {
+		numIndex := numberStr[index] - 48
+		mulResult *= int64(numIndex)
+	}
+	return
 }
