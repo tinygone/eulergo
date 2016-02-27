@@ -17,7 +17,6 @@ func Problem4() {
 			//fmt.Println(a * b)
 			if isPalindrome(a*b) && maxPalindromic < a*b {
 				maxPalindromic = a * b
-				fmt.Println(strconv.FormatInt(a, 10) + "*" + strconv.FormatInt(b, 10))
 			}
 		}
 	}

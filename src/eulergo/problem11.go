@@ -17,7 +17,6 @@ func Problem11() {
 	var maxMul int64 = 0
 	for i = 0; i < len(list2D)-3; i++ {
 		for j = 0; j < len(list2D[i])-3; j++ {
-			fmt.Println(list2D[i][j])
 			mul1 := list2D[i][j] * list2D[i][j+1] * list2D[i][j+2] * list2D[i][j+3]
 			mul2 := list2D[i][j] * list2D[i+1][j] * list2D[i+2][j] * list2D[i+3][j]
 			mul3 := list2D[i][j] * list2D[i+1][j+1] * list2D[i+2][j+2] * list2D[i+3][j+3]
@@ -28,7 +27,7 @@ func Problem11() {
 			}
 		}
 	}
-	fmt.Println("maxMul is " + maxMul)
+	fmt.Println("maxMul is " + strconv.FormatInt(maxMul, 10))
 }
 
 func readFile11() (list2D [][]int64) {
@@ -61,7 +60,6 @@ func readFile11() (list2D [][]int64) {
 				}
 
 			}
-			fmt.Println(lineNumbers)
 			list2D = append(list2D, lineNumbers)
 
 		} else if readerError == io.EOF {

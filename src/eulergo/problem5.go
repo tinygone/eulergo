@@ -39,7 +39,6 @@ func MultipleNatureNumber(start int64, end int64) (result int64) {
 	var result1 int64
 	for i := start + 1; i <= end; i++ {
 		result1 = result * i
-		fmt.Println(strconv.FormatInt(result1, 10) + " = " + strconv.FormatInt(result, 10) + " * " + strconv.FormatInt(i, 10))
 		result = result1
 	}
 	return result
@@ -50,7 +49,6 @@ func MultipleNumberArray(numberArray *[]int64) (result int64) {
 	var result1 int64
 	for _, i := range *numberArray {
 		result1 = result * i
-		fmt.Println(strconv.FormatInt(result1, 10) + " = " + strconv.FormatInt(result, 10) + " * " + strconv.FormatInt(i, 10))
 		result = result1
 	}
 	return result

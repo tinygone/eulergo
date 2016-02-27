@@ -7,7 +7,16 @@ import (
 
 func main() {
 	fmt.Println("start")
-	//fmt.Println(eulergo.Problem5(1, 20))
+	eulergo.Problem1()
+	eulergo.Problem2()
+	eulergo.Problem3()
+	eulergo.Problem4()
+	eulergo.Problem5()
+	eulergo.Problem6()
+	eulergo.Problem7()
+	eulergo.Problem8()
+	eulergo.Problem9()
+	eulergo.Problem10()
 	eulergo.Problem11()
 
 }

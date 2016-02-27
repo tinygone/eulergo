@@ -2,6 +2,7 @@ package eulergo
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 )
 
@@ -39,7 +40,9 @@ func Problem3() {
 
 func isPrime(natural int64) bool {
 	var i int64 = 2
-	for ; i < natural/2; i++ {
+	sqrt := int64(math.Sqrt(float64(natural)))
+	for ; i < sqrt; i++ {
+		//for ; i < natural/2; i++ {
 		if natural%i == 0 {
 			return false
 		}

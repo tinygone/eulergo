@@ -27,7 +27,6 @@ func Problem7() {
 		}
 		i++
 	}
-	fmt.Println(primeArray)
 
 	fmt.Println("result = " + strconv.FormatInt(i, 10))
 

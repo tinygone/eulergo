@@ -10,7 +10,7 @@ func Problem9() {
 	fmt.Println("Project Euler Problem9")
 
 	var multipleResult int64 = 0
-	var sum int64 = 10000000
+	var sum int64 = 10000
 
 	var a int64
 	var b int64
@@ -20,7 +20,7 @@ func Problem9() {
 		for b = 2; b < sum; b++ {
 			c = sum - b - a
 			if isPythagoreanTriplet(a, b, c) {
-				fmt.Println("find the triplet:")
+				fmt.Println("find the triplet:" + strconv.FormatInt(a, 10) + " " + strconv.FormatInt(b, 10) + " " + strconv.FormatInt(c, 10))
 				isContinue = false
 				break
 
