@@ -18,7 +18,12 @@ func main() {
 	//	eulergo.Problem9()
 	//	eulergo.Problem10()
 	//	eulergo.Problem11()
-	eulergo.Problem12()
+	//eulergo.Problem12()
 	//fmt.Println(eulergo.IsPrime(6))
+	a := make([]int64, 0, 0)
+	a = append(a, 1, 3, 3, 4, 5)
+	//e(primeFactors []int64, count int, length int)
+	l := eulergo.Combine(a, 1, len(a))
+	fmt.Println(l)
 
 }
