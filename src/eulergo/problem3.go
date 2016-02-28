@@ -38,10 +38,16 @@ func Problem3() {
 	fmt.Println("max Prime = " + strconv.FormatInt(maxPrime, 10))
 }
 
-func isPrime(natural int64) bool {
+func IsPrime(natural int64) bool {
+	switch natural {
+	case 1:
+	case 2:
+	case 3:
+		return true
+	}
 	var i int64 = 2
 	sqrt := int64(math.Sqrt(float64(natural)))
-	for ; i < sqrt; i++ {
+	for ; i <= sqrt; i++ {
 		//for ; i < natural/2; i++ {
 		if natural%i == 0 {
 			return false
@@ -54,7 +60,7 @@ func findMaxPrime(numbers *[]int64) (maxPrime int64) {
 	maxPrime = 0
 
 	for _, tmp := range *numbers {
-		if maxPrime < tmp && isPrime(tmp) {
+		if maxPrime < tmp && IsPrime(tmp) {
 			maxPrime = tmp
 		}
 	}

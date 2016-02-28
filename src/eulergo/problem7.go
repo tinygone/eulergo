@@ -14,7 +14,7 @@ func Problem7() {
 	var destCount = 10001
 	var i int64 = 3
 	for true {
-		if isPrime(i) {
+		if IsPrime(i) {
 			primeArray = append(primeArray, i)
 		}
 
